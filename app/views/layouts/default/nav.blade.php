@@ -17,6 +17,10 @@ echo Navbar::withBrand('<img src="' . asset('img/logo.png') .'" width="82" heigh
 							'link' => URL::route('users.index'),
 						],
 						[
+                            'title' => 'Teams',
+                            'link' => URL::route('teams.index'),
+                        ],
+						[
 							'title' => 'Games',
 							'link' => URL::route('usage.show', 'applications'),
 						],

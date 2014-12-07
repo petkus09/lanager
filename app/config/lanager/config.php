@@ -12,6 +12,6 @@ return array(
 	|
 	*/
 
-	'installed'	=> false,
+	'installed'	=> true,
 
 );

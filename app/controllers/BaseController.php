@@ -87,10 +87,10 @@ class BaseController extends Controller {
 		}
 		else // Storing or updating
 		{
-			if( $route['action'] = 'store' ) $save = $model->save();
-			if( $route['action'] = 'update' ) $save = $model->updateUniques();
+            if( $route['action'] == 'store' ) $save = $model->save();
+            if( $route['action'] == 'update' ) $save = $model->updateUniques();
 
-			if( ! $save )
+            if( ! $save )
 			{
 				if ( Request::ajax() ) return Response::json($model->errors(), 400);
 				Notification::danger($model->errors()->all());
@@ -111,7 +111,6 @@ class BaseController extends Controller {
 			// Add the model we just inserted / updated into the route parameters
 			$route['parameters'][str_plural($modelName)] = $model->id;
 		}
-
 		Event::fire( 'lanager.' . $route['resource'] . '.' . $route['action'], $model );
 		Notification::success('Successfully '. $successParticiple . ' ' .$modelName);
 		return Redirect::route($successRoute, $route['parameters'] );

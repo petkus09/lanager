@@ -73,6 +73,21 @@ class User extends BaseModel implements UserInterface {
 		return $this->hasMany('Zeropingheroes\Lanager\States\State');
 	}
 
+    public function teammembers()
+    {
+        return $this->hasMany('Infoshow\Teams\TeamMember');
+    }
+
+    public function teams()
+    {
+        return $this->belongsToMany('Infoshow\Teams\Team', 'team_members');
+    }
+
+    public function teams_owned()
+    {
+        return $this->hasMany('Infoshow\Teams\Team', 'captain_id');
+    }
+
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *

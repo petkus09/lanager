@@ -118,7 +118,8 @@ return array(
 		'Zeropingheroes\Duration\DurationServiceProvider',
 		'Zeropingheroes\Timespan\TimespanServiceProvider',
 		'Zeropingheroes\Lanager\Users\UserImportServiceProvider',
-		'Krucas\Notification\NotificationServiceProvider'
+		'Krucas\Notification\NotificationServiceProvider',
+        'Infoshow\Teams\TeamsServiceProvider'
 
 	),
 

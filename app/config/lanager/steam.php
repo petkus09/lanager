@@ -14,6 +14,6 @@ return array(
 	|
 	*/
 
-	'apikey' => '',
+	'apikey' => 'EB94D0325B86DA5ED6E135193EBCE114',
 
 );

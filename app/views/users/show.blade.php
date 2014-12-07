@@ -29,7 +29,21 @@
 				'link' => route('users.show', ['user' => $user->id, 'tab' => 'shouts'] ),
 				'active' => Input::get('tab') == 'shouts',
 			],
-			])
+			[
+                'title' => 'Teams',
+                'link' => route('users.show', ['user' => $user->id, 'tab' => 'teams'] ),
+                'active' => Input::get('tab') == 'teams',
+            ]
+			]);
+            /*if (Auth::check() AND $user->id == Auth::user()->id){
+                Navigation::tabs([
+                [
+                    'title' => 'Teams moderating',
+                    'link' => route('teams.show', ['captain' => $user->id, 'tab' => 'status'] ),
+                    'active' => (Input::get('tab') == 'status' OR empty(Input::get('tab')) ),
+                ],
+                ]);
+            }*/
 		}}
 	</div>
 	<div class="profile-content">
@@ -44,7 +58,13 @@
 		@elseif( Input::get('tab') == 'shouts' )
 			<h2>Shouts</h2>
 			@include('shouts.partials.list', ['shouts' => $user->shouts()->orderBy('created_at','desc')->take(3)->get()] )
-		@endif
+		@elseif( Input::get('tab') == 'teams' )
+            <h2>Teams</h2>
+            @include('teams::partials.list', ['teams' => $user->teams()->orderBy('name','desc')->get()] )
+            <h2>Teams Owned</h2>
+            @include('teams::partials.list', ['teams' => $user->teams_owned()->orderBy('name','desc')->get()] )
+            @include('teams::partials.actions', ['user' => $user] )
+        @endif
 	</div>
 
 @endsection
