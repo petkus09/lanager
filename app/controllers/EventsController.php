@@ -1,15 +1,14 @@
 <?php namespace Zeropingheroes\Lanager;
 
 use Zeropingheroes\Lanager\Events\Event,
-	Zeropingheroes\Lanager\Events\Types\Type;
-use View, Input, Redirect, Request, Response, URL, Auth;
+	Zeropingheroes\Lanager\EventTypes\EventType;
+use View, Input, Redirect, Request, Response, URL;
 
 class EventsController extends BaseController {
-
 	
 	public function __construct()
 	{
-		$this->beforeFilter('permission',array('only' => array('create', 'store', 'edit', 'update', 'destroy') ));
+		$this->beforeFilter('permission', ['only' => ['create', 'store', 'edit', 'update', 'destroy'] ]);
 	}
 
 	/**
@@ -59,7 +58,7 @@ class EventsController extends BaseController {
 	 */
 	public function create()
 	{
-		$eventTypes = array('' => ' ') + Type::lists('name','id');
+		$eventTypes = array('' => ' ') + EventType::lists('name','id');
 		$event = new Event;
 		return View::make('events.create')
 					->with('title','Create Event')
@@ -75,16 +74,11 @@ class EventsController extends BaseController {
 	public function store()
 	{
 		$event = new Event;
-		$event->name 			= Input::get('name');
-		$event->description 	= Input::get('description');
-		$event->start 			= Input::get('start');
-		$event->end 			= Input::get('end');
-		$event->signup_opens	= (Input::get('signup_opens') != NULL ? Input::get('signup_opens') : NULL);
-		$event->signup_closes	= (Input::get('signup_closes') != NULL ? Input::get('signup_closes') : NULL);
-		$event->event_type_id 	= (is_numeric(Input::get('event_type_id')) ? Input::get('event_type_id') : NULL); // turn non-numeric & empty values into NULL
+		$event->fill( Input::get() );
 
-		return $this->process( $event );		
-
+		if ( ! $this->save($event) ) return Redirect::back()->withInput();
+	
+		return Redirect::route('events.show', $event->id);	
 	}
 
 	/**
@@ -111,7 +105,7 @@ class EventsController extends BaseController {
 	public function edit($id)
 	{
 		$event = Event::findOrFail($id);
-		$eventTypes = array('' => ' ') + Type::lists('name','id');
+		$eventTypes = array('' => ' ') + EventType::lists('name','id');
 
 		return View::make('events.edit')
 					->with('title','Edit Event')
@@ -128,15 +122,11 @@ class EventsController extends BaseController {
 	public function update($id)
 	{
 		$event = Event::findOrFail($id);
-		$event->name 			= Input::get('name');
-		$event->description		= Input::get('description');
-		$event->start 			= Input::get('start');
-		$event->end 			= Input::get('end');
-		$event->signup_opens	= (Input::get('signup_opens') != NULL ? Input::get('signup_opens') : NULL);
-		$event->signup_closes	= (Input::get('signup_closes') != NULL ? Input::get('signup_closes') : NULL);
-		$event->event_type_id	= (is_numeric(Input::get('event_type_id')) ? Input::get('event_type_id') : NULL); // turn non-numeric & empty values into NULL
+		$event->fill( Input::get() );
 		
-		return $this->process( $event );
+		if ( ! $this->save($event) ) return Redirect::back()->withInput();
+
+		return Redirect::route('events.show', $event->id);	
 	}
 
 	/**
@@ -148,8 +138,7 @@ class EventsController extends BaseController {
 	public function destroy($id)
 	{
 		$event = Event::findOrFail($id);
-
-		return $this->process( $event );
+		$this->delete($event);
+		return Redirect::route('events.index');
 	}
-
 }

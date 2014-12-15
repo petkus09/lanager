@@ -1,7 +1,6 @@
 <?php namespace Zeropingheroes\Lanager;
 
 use	Zeropingheroes\Lanager\Users\User;
-use Illuminate\Support\MessageBag;
 use LightOpenID;
 use Auth, Input, Request, Redirect, View, UserImport, Notification;
 
@@ -59,39 +58,6 @@ class SessionsController extends BaseController {
 			Notification::danger('Unable to validate your OpenID');
 			return Redirect::route( 'sessions.login' );
 		}
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
 	}
 
 	/**

@@ -2,6 +2,141 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d4343b0-7315-4aef-8c34-89557f7d04fd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/migrations/2014_11_29_230933_remove_playlist_max_item_duplicates.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/migrations/2014_11_30_033228_remove_achievement_visible_field.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/migrations/2014_11_30_035228_remove_achievement_image_field.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/migrations/2014_11_30_043232_disallow_null_achievement_description.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/migrations/2014_11_30_134250_remove_playlist_item_vote_value_field.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/migrations/2014_11_30_140720_change_playlist_playback_state_default.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/migrations/2014_12_06_210934_rename_awards_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/migrations/2014_12_06_215115_rename_role_user_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/migrations/2014_12_08_223752_rename_info_pages_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Achievements/AchievementValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/EventSignups/EventSignup.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/EventSignups/EventSignupValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/EventSignupsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/EventTypes/EventType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/EventTypes/EventTypeValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Events/EventValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Pages/Page.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Pages/PageValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/PagesController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/seeds/PagesTableSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/PlaylistItems/PlayableItem.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/PlaylistItems/PlayableItemFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/PlaylistItems/PlaylistItem.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/PlaylistItems/PlaylistItemValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/PlaylistItemVotes/PlaylistItemVote.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/PlaylistItemVotes/PlaylistItemVoteHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/PlaylistItemVotes/PlaylistItemVoteValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Playlists/PlaylistValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Shouts/ShoutValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/PlaylistItems/UnplayableItemException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/UserAchievements/UserAchievementValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/UserAchievementsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/UserRoles/UserRole.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/UserRoles/UserRoleValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/UserRolesController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Users/UserValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/PlaylistItems/YouTubeVideo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/users/partials/avatar-username.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lang/en/confirmation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/playlist-items/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/event-signups/partials/list.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/partials/list.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/playlist-items/partials/list.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/user-achievements/partials/list.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/user-roles/partials/list.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/default/pages.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/lang/en/resources.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/achievements/show.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pages/show.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/event-signups/partials/signup-button.blade.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Events/Types/Type.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/InfoPages/InfoPage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Playlists/Items/Item.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Playlists/Items/Votes/Vote.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Playlists/Items/Votes/VoteHandler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/RoleAssignments/RoleAssignment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Signups/Signup.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/AwardsController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/InfoPagesController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/RoleAssignmentsController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/SignupsController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/seeds/InfoPagesTableSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/validators.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/validators/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/validators/CustomValidator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/awards/partials/list.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/infopages/partials/list.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/infopages/show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/layouts/default/infopages.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/playlistitems/index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/playlistitems/partials/list.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/roleassignments/create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/roleassignments/partials/list.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/signups/partials/form.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/signups/partials/list.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/composer.lock" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Awards/Award.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/UserAchievements/UserAchievement.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/awards/create.blade.php" afterPath="$PROJECT_DIR$/app/views/pages/create.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/awards/partials/form.blade.php" afterPath="$PROJECT_DIR$/app/views/user-achievements/partials/form.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/infopages/create.blade.php" afterPath="$PROJECT_DIR$/app/views/user-achievements/create.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/infopages/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/pages/edit.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/infopages/index.blade.php" afterPath="$PROJECT_DIR$/app/views/pages/index.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/infopages/partials/form.blade.php" afterPath="$PROJECT_DIR$/app/views/pages/partials/form.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/playlistitems/partials/form.blade.php" afterPath="$PROJECT_DIR$/app/views/playlist-items/partials/form.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/roleassignments/index.blade.php" afterPath="$PROJECT_DIR$/app/views/event-signups/index.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/roleassignments/partials/form.blade.php" afterPath="$PROJECT_DIR$/app/views/user-roles/partials/form.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/signups/create.blade.php" afterPath="$PROJECT_DIR$/app/views/user-roles/create.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/signups/index.blade.php" afterPath="$PROJECT_DIR$/app/views/user-roles/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Achievements/Achievement.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Achievements/Achievement.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AchievementsController.php" afterPath="$PROJECT_DIR$/app/controllers/AchievementsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Applications/Application.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Applications/Application.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/BaseController.php" afterPath="$PROJECT_DIR$/app/controllers/BaseController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/BaseModel.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/BaseModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/app/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Events/Event.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Events/Event.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Events/EventPresenter.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Events/EventPresenter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/seeds/EventTypesTableSeeder.php" afterPath="$PROJECT_DIR$/app/seeds/EventTypesTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/EventsController.php" afterPath="$PROJECT_DIR$/app/controllers/EventsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/commands/Install.php" afterPath="$PROJECT_DIR$/app/commands/Install.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Lans/Lan.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Lans/Lan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Permissions/Permission.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Permissions/Permission.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Playlists/Playlist.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Playlists/Playlist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PlaylistItemVotesController.php" afterPath="$PROJECT_DIR$/app/controllers/PlaylistItemVotesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PlaylistItemsController.php" afterPath="$PROJECT_DIR$/app/controllers/PlaylistItemsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PlaylistsController.php" afterPath="$PROJECT_DIR$/app/controllers/PlaylistsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Roles/Role.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Roles/Role.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Servers/Server.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Servers/Server.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/SessionsController.php" afterPath="$PROJECT_DIR$/app/controllers/SessionsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Shouts/Shout.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Shouts/Shout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ShoutsController.php" afterPath="$PROJECT_DIR$/app/controllers/ShoutsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/States/State.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/States/State.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UsageController.php" afterPath="$PROJECT_DIR$/app/controllers/UsageController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Users/User.php" afterPath="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Users/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/controllers/UsersController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/partials/actions.blade.php" afterPath="$PROJECT_DIR$/app/views/users/partials/actions.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/default/admin.blade.php" afterPath="$PROJECT_DIR$/app/views/layouts/default/admin.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/app.php" afterPath="$PROJECT_DIR$/app/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/composers.php" afterPath="$PROJECT_DIR$/app/composers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/achievements/create.blade.php" afterPath="$PROJECT_DIR$/app/views/achievements/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/create.blade.php" afterPath="$PROJECT_DIR$/app/views/events/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/playlists/create.blade.php" afterPath="$PROJECT_DIR$/app/views/playlists/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/events/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/achievements/partials/form.blade.php" afterPath="$PROJECT_DIR$/app/views/achievements/partials/form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/partials/form.blade.php" afterPath="$PROJECT_DIR$/app/views/events/partials/form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/playlists/partials/form.blade.php" afterPath="$PROJECT_DIR$/app/views/playlists/partials/form.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/global.php" afterPath="$PROJECT_DIR$/app/start/global.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/handlers.php" afterPath="$PROJECT_DIR$/app/handlers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/achievements/index.blade.php" afterPath="$PROJECT_DIR$/app/views/achievements/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/macros.php" afterPath="$PROJECT_DIR$/app/macros.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/lanager/permissions.php" afterPath="$PROJECT_DIR$/app/config/lanager/permissions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/lanager/playlist.php" afterPath="$PROJECT_DIR$/app/config/lanager/playlist.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.blade.php" afterPath="$PROJECT_DIR$/app/views/users/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lang/en/validation.php" afterPath="$PROJECT_DIR$/app/lang/en/validation.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lanager.iws" />
@@ -27,21 +162,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/users/show.blade.php">
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38709676" vertical-offset="116" max-vertical-offset="1444">
-              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-              <folding>
-                <marker date="1417968685755" expanded="true" signature="155:513" placeholder="..." />
-                <marker date="1417968685755" expanded="true" signature="812:1552" placeholder="..." />
-                <marker date="1417968685755" expanded="true" signature="813:1551" placeholder="..." />
-                <marker date="1417968685755" expanded="true" signature="818:1003" placeholder="..." />
-                <marker date="1417968685755" expanded="true" signature="1010:1182" placeholder="..." />
-                <marker date="1417968685755" expanded="true" signature="1189:1343" placeholder="..." />
-                <marker date="1417968685755" expanded="true" signature="1350:1546" placeholder="..." />
-                <marker date="1417968685755" expanded="true" signature="1569:1970" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="2.0330935" vertical-offset="886" max-vertical-offset="4522">
+              <caret line="121" column="46" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,13 +187,11 @@
       <list>
         <option value="$PROJECT_DIR$/app/config/lanager/steam.php" />
         <option value="$PROJECT_DIR$/app/views/layouts/default/nav.blade.php" />
-        <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/workbench/infoshow/teams/src/views/index.blade.php" />
         <option value="$PROJECT_DIR$/workbench/infoshow/teams/src/views/partials/list.blade.php" />
         <option value="$PROJECT_DIR$/workbench/infoshow/teams/src/controllers/TeamsController.php" />
         <option value="$PROJECT_DIR$/workbench/infoshow/teams/src/Infoshow/Teams/TeamMember.php" />
         <option value="$PROJECT_DIR$/workbench/infoshow/teams/src/controllers/TeamMembersController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/BaseController.php" />
         <option value="$PROJECT_DIR$/workbench/infoshow/teams/src/views/show.blade.php" />
         <option value="$PROJECT_DIR$/workbench/infoshow/teams/src/views/create.blade.php" />
         <option value="$PROJECT_DIR$/workbench/infoshow/teams/src/views/edit.blade.php" />
@@ -75,12 +199,15 @@
         <option value="$PROJECT_DIR$/app/Zeropingheroes/Lanager/Users/User.php" />
         <option value="$PROJECT_DIR$/workbench/infoshow/teams/src/views/partials/actions.blade.php" />
         <option value="$PROJECT_DIR$/app/views/users/show.blade.php" />
+        <option value="$PROJECT_DIR$/composer.lock" />
+        <option value="$PROJECT_DIR$/app/config/app.php" />
+        <option value="$PROJECT_DIR$/app/controllers/BaseController.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1431" />
+    <option name="x" value="65" />
     <option name="y" value="24" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
@@ -188,70 +315,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="workbench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="infoshow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teams" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workbench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="infoshow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teams" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -292,15 +355,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Zeropingheroes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Users" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,11 +373,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -340,33 +391,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -433,7 +458,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1431" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -483,14 +508,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="1444">
           <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
           <folding>
-            <marker date="1417968685755" expanded="true" signature="155:513" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="812:1552" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="813:1551" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="818:1003" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="1010:1182" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="1189:1343" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="1350:1546" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="1569:1970" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -499,6 +524,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1083" max-vertical-offset="3667">
           <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -506,6 +532,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1083" max-vertical-offset="3667">
           <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -534,20 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5467626" vertical-offset="0" max-vertical-offset="988">
           <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2733813" vertical-offset="2508" max-vertical-offset="4503">
-          <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/awards/partials/list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="836">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -586,20 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/signups/partials/form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08201439" vertical-offset="0" max-vertical-offset="695">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/signups/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10935252" vertical-offset="0" max-vertical-offset="695">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/workbench/infoshow/teams/src/config/lanager/permissions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.31223023" vertical-offset="217" max-vertical-offset="912">
@@ -611,20 +610,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10935252" vertical-offset="0" max-vertical-offset="695">
           <caret line="5" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/signups/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="718">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/signups/partials/list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3007194" vertical-offset="0" max-vertical-offset="695">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -761,17 +747,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8636364" vertical-offset="382" max-vertical-offset="2318">
-          <caret line="89" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Zeropingheroes/Lanager/Users/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51942444" vertical-offset="1197" max-vertical-offset="3762">
           <caret line="85" column="31" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -815,15 +795,55 @@
         <state vertical-scroll-proportion="0.38709676" vertical-offset="116" max-vertical-offset="1444">
           <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
           <folding>
-            <marker date="1417968685755" expanded="true" signature="155:513" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="812:1552" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="813:1551" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="818:1003" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="1010:1182" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="1189:1343" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="1350:1546" placeholder="..." />
-            <marker date="1417968685755" expanded="true" signature="1569:1970" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679771465" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1235">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/PagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4172661" vertical-offset="1680" max-vertical-offset="2375">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/UserRolesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2143885" vertical-offset="844" max-vertical-offset="1539">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74926686" vertical-offset="97" max-vertical-offset="1121">
+          <caret line="35" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.0330935" vertical-offset="886" max-vertical-offset="4522">
+          <caret line="121" column="46" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

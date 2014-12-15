@@ -65,7 +65,7 @@ return array(
 	|
 	*/
 
-	'key' => '',
+	'key' => 'sWJAbGoCRExWMxDyhhh8aaRd9RK2hN90',
 	'cipher' => MCRYPT_RIJNDAEL_256,
 
 	/*
@@ -108,7 +108,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-		// 'Profiler\ProfilerServiceProvider',
+		'Profiler\ProfilerServiceProvider',
 
 		'Authority\AuthorityL4\AuthorityL4ServiceProvider',
 		'VTalbot\Markdown\MarkdownServiceProvider',
@@ -119,8 +119,8 @@ return array(
 		'Zeropingheroes\Timespan\TimespanServiceProvider',
 		'Zeropingheroes\Lanager\Users\UserImportServiceProvider',
 		'Krucas\Notification\NotificationServiceProvider',
-        'Infoshow\Teams\TeamsServiceProvider'
-
+        'Infoshow\Teams\TeamsServiceProvider',
+		'Mews\Purifier\PurifierServiceProvider',
 	),
 
 	/*
@@ -190,7 +190,7 @@ return array(
 
 		'Notification' => 'Krucas\Notification\Facades\Notification',
 
-		//'Profiler'				=> 'Profiler\Facades\Profiler',
+		'Profiler'				=> 'Profiler\Facades\Profiler',
 
 		'SteamBrowserProtocol'	=> 'Zeropingheroes\SteamBrowserProtocol\Facades\SteamBrowserProtocol',
 		'Duration'				=> 'Zeropingheroes\Duration\Facades\Duration',
@@ -225,6 +225,7 @@ return array(
 		'Authority'				=> 'Authority\AuthorityL4\Facades\Authority',
 		'Notification'			=> 'Krucas\Notification\Facades\Notification',
 		'Markdown'				=> 'VTalbot\Markdown\Facades\Markdown',
+		'Purifier'				=> 'Mews\Purifier\Facades\Purifier',
 
 	),
 

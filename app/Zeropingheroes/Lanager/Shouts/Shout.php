@@ -4,9 +4,9 @@ use Zeropingheroes\Lanager\BaseModel;
 
 class Shout extends BaseModel {
 
-	public static $rules = array(
-		'content'		=> 'required|max:140|flood_protect:shouts',
-	);
+	protected $fillable = ['user_id', 'content', 'pinned'];
+
+	public $validator = 'Zeropingheroes\Lanager\Shouts\ShoutValidator';
 
 	public function user()
 	{

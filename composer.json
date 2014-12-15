@@ -6,7 +6,6 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"vtalbot/markdown": "1.*",
-		"laravelbook/ardent": "dev-master",
 		"patricktalmadge/bootstrapper": "dev-develop",
 		"tsukanov/steam-locomotive": "dev-master",
 		"lightopenid/lightopenid": "dev-master",
@@ -17,7 +16,8 @@
 		"laracasts/presenter": "0.1.*",
 		"zeropingheroes/duration": "dev-master",
 		"zeropingheroes/timespan": "dev-master",
-		"mews/purifier": "1.0.1"
+		"mews/purifier": "1.0.1",
+		"fadion/validator-assistant": "dev-master"
 	},
 	"authors": [
 	{
@@ -36,7 +36,6 @@
 			"app/controllers",
 			"app/migrations",
 			"app/seeds",
-			"app/validators",
 			"app/helpers"
 		]
 	},

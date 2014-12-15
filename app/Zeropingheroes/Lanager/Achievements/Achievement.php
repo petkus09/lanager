@@ -3,19 +3,14 @@
 use Zeropingheroes\Lanager\BaseModel;
 
 class Achievement extends BaseModel {
-	
-	public static $rules = array(
-		'name'			=> 'required|max:255',
-	);
 
-	public function awards()
-	{
-		return $this->hasMany('Zeropingheroes\Lanager\Awards\Award');
-	}
+	protected $fillable = ['name', 'description'];
 
-	public function users()
+	public $validator = 'Zeropingheroes\Lanager\Achievements\AchievementValidator';
+
+	public function userAchievements()
 	{
-		return $this->belongsToMany('Zeropingheroes\Lanager\Users\User', 'awards');
+		return $this->hasMany('Zeropingheroes\Lanager\UserAchievements\UserAchievement');
 	}
 
 }

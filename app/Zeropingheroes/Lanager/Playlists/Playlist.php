@@ -4,17 +4,15 @@ use Zeropingheroes\Lanager\BaseModel;
 
 class Playlist extends BaseModel {
 
-	public static $rules = array(
-		'name'					=> 'required|max:255|unique:playlists',
-		'description'			=> 'max:255',
-		'max_item_duration'		=> 'numeric|min:1',
-		'max_item_duplicates'	=> 'numeric|min:0',
-		'user_skip_threshold'	=> 'numeric|min:1|max:100',
-	);
-	
-	public function items()
+	protected $fillable = ['name', 'description', 'playback_state', 'max_item_duration', 'user_skip_threshold'];
+
+	protected $nullable = ['description', 'max_item_duration', 'user_skip_threshold'];
+
+	public $validator = 'Zeropingheroes\Lanager\Playlists\PlaylistValidator';
+
+	public function playlistItems()
 	{
-		return $this->hasMany('Zeropingheroes\Lanager\Playlists\Items\Item');
+		return $this->hasMany('Zeropingheroes\Lanager\PlaylistItems\PlaylistItem');
 	}
 
 }

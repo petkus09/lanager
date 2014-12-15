@@ -1,13 +1,13 @@
 <?php namespace Zeropingheroes\Lanager;
 
 use Zeropingheroes\Lanager\Shouts\Shout;
-use Input, Redirect, View, Auth, Request, Response;
+use Input, Redirect, View, Auth;
 
 class ShoutsController extends BaseController {
 
 	public function __construct()
 	{
-		$this->beforeFilter('permission',array('only' => array('create', 'store', 'edit', 'update', 'destroy') ));
+		$this->beforeFilter('permission', ['only' => ['store', 'update', 'destroy'] ]);
 	}
 
 	/**
@@ -17,24 +17,14 @@ class ShoutsController extends BaseController {
 	 */
 	public function index()
 	{
-		if ( Request::ajax() ) return Response::json(Shout::with('user', 'user.roles')->get());
 		$shouts = Shout::with('user', 'user.roles')
-				->orderBy('pinned', 'desc')
-				->orderBy('created_at', 'desc')
-				->paginate(10);
+					->orderBy('pinned', 'desc')
+					->orderBy('created_at', 'desc')
+					->paginate(10);
+
 		return View::make('shouts.index')
 					->with('title', 'Shouts')
 					->with('shouts', $shouts);
-	}
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
 	}
 
 	/**
@@ -46,32 +36,12 @@ class ShoutsController extends BaseController {
 	{
 		$shout = new Shout;
 		$shout->user_id = Auth::user()->id;
-		$shout->content = Input::get('content');
 
-		return $this->process( $shout, 'shouts.index', 'shouts.index' );		
+		$shout->fill( Input::get() );
 
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		return Redirect::route('shouts.index');
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
+		if ( ! $this->save($shout) ) return Redirect::back()->withInput();
+		
+		return Redirect::back();
 	}
 
 	/**
@@ -83,12 +53,11 @@ class ShoutsController extends BaseController {
 	public function update($id)
 	{
 		$shout = Shout::findOrFail($id);
+		$shout->fill( Input::get() );
 
-		if( Input::has('user_id') )	$shout->user_id	= User::findOrFail(Input::get('user_id'))->id;
-		if( Input::has('content') )	$shout->content = Input::get('content');
-		if( Input::has('pinned') )	$shout->pinned = (int) Input::get('pinned');
-
-		return $this->process( $shout, 'shouts.index', 'shouts.index' );		
+		if ( ! $this->save($shout) ) return Redirect::back()->withInput();
+		
+		return Redirect::back();
 	}
 
 	/**
@@ -100,8 +69,8 @@ class ShoutsController extends BaseController {
 	public function destroy($id)
 	{
 		$shout = Shout::findOrFail($id);
-
-		return $this->process( $shout );
+		$this->delete($shout);
+		return Redirect::back();
 	}
 
 }

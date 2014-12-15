@@ -6,7 +6,8 @@
 |--------------------------------------------------------------------------
 */
 Route::resource('users', 'Zeropingheroes\Lanager\UsersController');
-Route::resource('role-assignments', 'Zeropingheroes\Lanager\RoleAssignmentsController');
+Route::resource('user-roles', 'Zeropingheroes\Lanager\UserRolesController');
+Route::resource('user-achievements', 'Zeropingheroes\Lanager\UserAchievementsController');
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +20,10 @@ Route::get('logout', array('as' => 'sessions.logout', 'uses' => 'Zeropingheroes\
 
 /*
 |--------------------------------------------------------------------------
-| Info Pages
+| Pages
 |--------------------------------------------------------------------------
 */
-Route::resource('infopages', 'Zeropingheroes\Lanager\InfoPagesController');
+Route::resource('pages', 'Zeropingheroes\Lanager\PagesController');
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +46,7 @@ Route::resource('usage', 'Zeropingheroes\Lanager\UsageController', array('only' 
 */
 Route::get('events/timetable', array('as' => 'events.timetable', 'uses' => 'Zeropingheroes\Lanager\EventsController@timetable'));
 Route::resource('events', 'Zeropingheroes\Lanager\EventsController');
-Route::resource('signups', 'Zeropingheroes\Lanager\SignupsController');
+Route::resource('events.signups', 'Zeropingheroes\Lanager\EventSignupsController');
 
 /*
 |--------------------------------------------------------------------------
@@ -62,7 +63,6 @@ Route::resource('playlists.items.votes', 'Zeropingheroes\Lanager\PlaylistItemVot
 |--------------------------------------------------------------------------
 */
 Route::resource('achievements', 'Zeropingheroes\Lanager\AchievementsController');
-Route::resource('awards', 'Zeropingheroes\Lanager\AwardsController');
 
 /*
 |--------------------------------------------------------------------------

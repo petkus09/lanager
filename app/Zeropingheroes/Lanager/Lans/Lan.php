@@ -4,9 +4,11 @@ use Zeropingheroes\Lanager\BaseModel;
 
 class Lan extends BaseModel {
 
-	public function awards()
+	protected $fillable = ['name', 'start', 'end'];
+
+	public function userAchievement()
 	{
-		return $this->hasMany('Zeropingheroes\Lanager\Awards\Award');
+		return $this->hasMany('Zeropingheroes\Lanager\UserAchievements\UserAchievement');
 	}
 
 }

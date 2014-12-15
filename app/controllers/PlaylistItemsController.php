@@ -2,14 +2,17 @@
 
 use Zeropingheroes\Lanager\BaseController;
 use Zeropingheroes\Lanager\Playlists\Playlist,
-	Zeropingheroes\Lanager\Playlists\Items\Item;
-use View, Response, Auth, Input, Redirect, Request, DateTime, Authority;
+	Zeropingheroes\Lanager\PlaylistItems\PlaylistItem,
+	Zeropingheroes\Lanager\PlaylistItems\PlayableItemFactory,
+	Zeropingheroes\Lanager\PlaylistItems\UnplayableItemException;
+
+use View, Auth, Input, Redirect, Config, Notification;
 
 class PlaylistItemsController extends BaseController {
 
 	public function __construct()
 	{
-		$this->beforeFilter('permission', array('only' => array('store', 'update', 'destroy')) );
+		$this->beforeFilter('permission', ['only' => ['store', 'update', 'destroy'] ]);
 	}
 
 	/**
@@ -20,55 +23,16 @@ class PlaylistItemsController extends BaseController {
 	public function index($playlistId)
 	{
 		$playlist = Playlist::findOrFail($playlistId);
-		$items = $playlist->items();
 
-		if ( Request::ajax() )
-		{
-			$items = $playlist->items();
+		$playlistItems = $playlist->playlistItems()
+					->where('playback_state', 0)
+					->orderBy('created_at', 'asc')
+					->paginate(10);
 
-			// Filter based on query string
-			if ( Input::has('playback_state') ) $items->where('playback_state', Input::get('playback_state') );
-			if ( Input::has('order_by') ) $items->orderBy( Input::get('order_by'), Input::get('sort', 'asc') );
-			if ( Input::has('skip') ) $items->skip( Input::get('skip') );
-			if ( Input::has('take') ) $items->take( Input::get('take') );
-			
-			// Allow related models to be returned
-			if ( Input::has('with') ) $items->with( explode(',', Input::get('with')) );
-
-			return Response::json( $items->get() );
-		}
-
-		if( Input::get('history') )
-		{
-			$items = $items
-				->where('playback_state', '!=', 0)
-				->orderBy('played_at', 'desc');
-
-			$title = 'Playlist History - ' . $playlist->name;
-			$history = true;
-			$nowPlaying = false;
-			$itemInPlayer = null;
-		}
-		else
-		{
-			$items = $items
-				->where('playback_state', 0)
-				->orderBy('created_at', 'asc');			
-			
-			$title = 'Playlist - ' . $playlist->name;
-			$history = false;
-			$itemInPlayer = $items->take(1)->first();
-		}
-		$duration = $items->sum('duration');
-		$items = $items->paginate(10);
-
-		return View::make('playlistitems.index')
-					->with('title', $title)
+		return View::make('playlist-items.index')
+					->with('title', 'Playlist - ' . $playlist->name)
 					->with('playlist', $playlist)
-					->with('duration', $duration)
-					->with('items', $items)
-					->with('itemInPlayer', $itemInPlayer)
-					->with('history', $history);
+					->with('playlistItems', $playlistItems);
 	}
 
 	/**
@@ -80,28 +44,27 @@ class PlaylistItemsController extends BaseController {
 	{
 		$playlist = Playlist::findOrFail($playlistId);
 
-		$item = new Item;
-		$item->playlist_id = $playlistId;
-		$item->user_id = Auth::user()->id;
-		$item->url = Input::get('url');
+		$playlistItem = new PlaylistItem;
+		$playlistItem->playlist_id 	= $playlistId;
+		$playlistItem->user_id 		= Auth::user()->id;
 
-		return $this->process( $item, 'playlists.items.index', 'playlists.items.index' );
+		$providers = Config::get('lanager/playlist.providers');
 
-	}
+		try // ...to pull in the item (by URL) from a provider
+		{
+			$playableItem = (new PlayableItemFactory)->create( Input::get('url'), $providers);
+		}
+		catch(UnplayableItemException $e)
+		{
+			Notification::danger($e->getMessage());
+			return Redirect::back();
+		}
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $playlistId
-	 * @param  int  $itemId
-	 * @return Response
-	 */
-	public function show($playlistId, $itemId)
-	{
-		$item = Playlist::findOrFail($playlistId)->items()->findOrFail($itemId);
+		$playlistItem->fill( $playableItem->toArray() );
+
+		if ( ! $this->save($playlistItem) ) return Redirect::back()->withInput();
 		
-		if ( Request::ajax() ) return Response::json($item);
-		return Redirect::route('playlists.items.index', $playlistId);
+		return Redirect::route('playlists.items.index', $playlist->id);
 	}
 
 	/**
@@ -110,17 +73,15 @@ class PlaylistItemsController extends BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($playlistId, $itemId)
+	public function update($playlistId, $playlistItemId)
 	{
-		$item = Playlist::findOrFail($playlistId)->items()->findOrFail($itemId);
+		$playlistItem = Playlist::findOrFail($playlistId)->playlistItems()->findOrFail($playlistItemId);
 			
-		if( Input::has('playback_state') ) $item->playback_state = Input::get('playback_state');
-		if( Input::has('skip_reason') && $item->playback_state == 2 ) $item->skip_reason = Input::get('skip_reason');
-		
-		if( $item->playback_state == 1 ) $item->played_at = new DateTime;
+		$playlistItem->fill( Input::get() );
 
-		return $this->process( $item, 'playlists.items.index', 'playlists.items.index' );
+		if ( ! $this->save($playlistItem) ) return Redirect::back()->withInput();
 		
+		return Redirect::route('playlists.items.index', $playlist->id);
 	}
 
 	/**
@@ -129,11 +90,10 @@ class PlaylistItemsController extends BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($playlistId, $itemId)
+	public function destroy($playlistId, $playlistItemId)
 	{
-		$item = Playlist::findOrFail($playlistId)->items()->findOrFail($itemId);
-
-		return $this->process( $item );
+		$playlistItem = Playlist::findOrFail($playlistId)->playlistItems()->findOrFail($playlistItemId);
+		$this->delete($playlistItem);
+		return Redirect::back();
 	}
-
 }
