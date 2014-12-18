@@ -50,8 +50,8 @@ class SessionsController extends BaseController {
 			$openId = new LightOpenID(Request::server('HTTP_HOST'));
 			if ( $openId->validate() )
 			{
-				$user = UserImport::fromSteam( substr($openId->identity, -17) );
-				Auth::login($user);
+                $user = UserImport::fromSteam( substr($openId->data['openid_identity'], -17) );
+                Auth::login($user);
 				if( $user->steam_visibility != 3 ) return Redirect::route('users.show', $user->id);
 				return Redirect::to('/');
 			}

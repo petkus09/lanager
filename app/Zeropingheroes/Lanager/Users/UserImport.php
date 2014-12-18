@@ -14,9 +14,9 @@ class UserImport {
 
 	public function fromSteam($steamId64)
 	{
-		$steamUser = $this->steamUser->getUser($steamId64);
+        $steamUser = $this->steamUser->getUser($steamId64);
 
-		// Create new user if they are not found in the database
+        // Create new user if they are not found in the database
 		if( ! $user = User::where('steam_id_64', '=', $steamId64)->first()) $user = new User;
 
 		$user->username 		= $steamUser->username;
@@ -28,8 +28,8 @@ class UserImport {
 
 		if( $user->save() )
 		{
-			Event::fire('lanager.users.store', $user );
-			return $user;
+            Event::fire('lanager.users.store', $user );
+            return $user;
 		}
 
 		throw new UserImportException($user->errors()); // Cast to string as JSON
